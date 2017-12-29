@@ -4,8 +4,53 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>colorwebsite</title>
+    <style>
+        .browserUpgrade{
+          position: absolute;
+          left:0;
+          top:0;
+          width:100%;
+          height:100%;
+          background-color:rgb(241, 154, 42);
+          text-align: center;
+          color: #fff;
+          font-size:24px;
+          font-family:Microsoft YaHei, Arial, Helvetica, sans-serif;
+        }
+        .browserUpgrade .tip{
+          width: 900px;
+          height:30px;
+          line-height: 30px;
+          text-align: center;
+          margin:160px auto 40px auto;
+        }
+        .browserUpgrade .tip-author{
+          width: 900px;
+          height: 30px;
+          line-height: 30px;
+          text-align: right;
+          margin:0 auto 40px auto;
+          font-style: italic;
+        }
+        .browserUpgrade .upgrade-link{
+          padding: 10px 20px;
+          border: 2px solid #fff;
+          text-decoration: none;
+          color: #fff;
+        }
+    </style>
+   
   </head>
   <body>
+      <!-- 浏览器判断 -->
+      <!--[if lte IE 10]>
+      <div class="browserUpgrade">
+        <div class="tip">"Duang",你被囧荣鄙视了，还在用这么low的浏览器,快去升级吧！</div>
+        <div class="tip-author">  -by jiongrong</div>
+        <a class="upgrade-link" href="http://browsehappy.osfipin.com/">点我升级</a>
+      </div>
+      <style>#app{display:none;}</style>
+    <![endif]-->
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

@@ -1,6 +1,7 @@
 # colorwebsite
 
 > AlloyTeam website
+> 模仿http://www.alloyteam.com/ ，目的，锻炼自己html,css,js 在pc端的前端基本功力。
 
 ## Build Setup
 
@@ -29,6 +30,8 @@ npm test
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+
+## 目录参考模板
 
 ├── build                      // 构建相关  
 ├── config                     // 配置相关
@@ -63,3 +66,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ├── index.html                 // html模板
 ├── package.json               // 包依赖配置
 └── README.md                  // 说明文件
+
+## 采用技术栈
+
+> vue+vuex+iview+webpack 单页面应用，暂时不考虑后台
