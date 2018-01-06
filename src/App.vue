@@ -7,7 +7,7 @@
           <a href="#" class=">
             <span class="logo-icon-wrapper"><img src="./images/home/logo.png"></span>
             <span class="logo-text">AollyTeam</span>
-          </a>y
+          </a>
 
         </h1> -->
         <a class="logo" href="#">
@@ -15,16 +15,15 @@
           <span class="logo-text">AollyTeam</span> 
         </a>
         <ul class="container">
-            <li v-for="item in menuArr" :key=item.title>
-              <img v-if="typeof item.icon !=='undefined'" :src="item.icon" />
-              <span>{{ item.title }}</span>
+            <li v-for="(item,index) in menuArr" :key="index" :link="item.link" @click="directTo(index)" :class="{activeItem:item.isActive}">
+              <img class="nav-icon" v-if="typeof item.icon !=='undefined'" :src="item.icon"  />
+             {{ item.title }}
             </li>
         </ul>
       </header>
-      <div class="indexCarousel"></div>
-      <keep-alive>
+     <div class="main">
         <router-view></router-view>
-      </keep-alive>
+      </div>
       <footer>这是底部</footer>
   </div>
 </template>
@@ -36,31 +35,56 @@ export default {
     return {
       menuArr: [
         {
-          title: '首页'
+          title: '首页',
+          link: 'home',
+          isActive: false
         },
         {
-          title: '博客'
+          title: '博客',
+          link: 'bog',
+          isActive: false
         },
         {
-          title: 'Github'
+          title: 'Github',
+          link: 'github',
+          isActive: false
         },
         {
-          icon: './images/home/hot.png',
-          title: 'AC前端大会'
+          icon: '../../src/images/home/hot.png',
+          title: 'AC前端大会',
+          link: 'github',
+          isActive: false
         },
         {
-          title: 'SuperStar'
+          title: 'SuperStar',
+          link: 'github',
+          isActive: false
         },
         {
-          title: 'Web前端导航'
+          title: 'Web前端导航',
+          link: 'github',
+          isActive: false
         },
         {
-          title: '关于'
+          title: '关于',
+          link: 'github',
+          isActive: false
         }
-      ]
+      ],
+      currentActive: 0
     }
   },
-  mounted () {}
+  mounted () {
+    this.$router.push(this.menuArr[this.currentActive].link)
+  },
+  methods: {
+    directTo (index) {
+      this.$router.push(this.menuArr[index].link)
+      this.menuArr[this.currentActive].isActive = false
+      this.menuArr[index].isActive = true
+      this.currentActive = index
+    }
+  }
 }
 </script>
 
@@ -72,7 +96,6 @@ export default {
   text-align: center;
   // color: #2c3e50;
   color: #fff !important;
-  margin-top: 60px;
   header {
     position: fixed;
     left: 0;
@@ -80,9 +103,10 @@ export default {
     z-index: 30;
     height: 60px;
     width: 100%;
-    background-color: #000;
     line-height: 60px;
     padding: 0 60px;
+    // opacity: 0;
+    color: #fff !important;
     a.logo {
       font-size: 28px;
       font-family: Segoe UI Light;
@@ -94,9 +118,11 @@ export default {
         vertical-align: middle;
       }
       .logo-text {
+        display: inline-block;
         height: 30px;
-        line-height: 1.1;
+        line-height: 30px;
         font-weight: 400;
+        vertical-align: middle;
       }
     }
     ul {
@@ -107,11 +133,16 @@ export default {
         height: 60px;
         line-height: 60px;
         font-size: 16px;
+        .nav-icon{
+          vertical-align: middle;
+          width:18px;
+          height: 23px;
+        }
+      }
+      .activeItem{
+        color:'#f2b535'
       }
     }
-  }
-  .indexCarousel {
-    height: 400px;
   }
 }
 </style>
