@@ -15,7 +15,7 @@
           <span class="logo-text">AollyTeam</span> 
         </a>
         <ul class="container">
-            <li v-for="(item,index) in menuArr" :key="index" :link="item.link" @click="directTo(index)" :class="{activeItem:item.isActive}">
+            <li v-for="(item,index) in menuArr" :key="index" :link="item.link" @click="directTo( index )" :class="{activeItem:item.isActive}">
               <img class="nav-icon" v-if="typeof item.icon !=='undefined'" :src="item.icon"  />
              {{ item.title }}
             </li>
@@ -30,62 +30,62 @@
 
 <script>
 export default {
-  name: 'app',
-  data () {
+  name: "app",
+  data() {
     return {
       menuArr: [
         {
-          title: '首页',
-          link: 'home',
+          title: "首页",
+          link: "home",
           isActive: false
         },
         {
-          title: '博客',
-          link: 'bog',
+          title: "博客",
+          link: "bog",
           isActive: false
         },
         {
-          title: 'Github',
-          link: 'github',
+          title: "Github",
+          link: "github",
           isActive: false
         },
         {
-          icon: '../../src/images/home/hot.png',
-          title: 'AC前端大会',
-          link: 'github',
+          icon: "../../src/images/home/hot.png",
+          title: "AC前端大会",
+          link: "github",
           isActive: false
         },
         {
-          title: 'SuperStar',
-          link: 'github',
+          title: "SuperStar",
+          link: "github",
           isActive: false
         },
         {
-          title: 'Web前端导航',
-          link: 'github',
+          title: "Web前端导航",
+          link: "github",
           isActive: false
         },
         {
-          title: '关于',
-          link: 'github',
+          title: "关于",
+          link: "github",
           isActive: false
         }
       ],
       currentActive: 0
-    }
+    };
   },
-  mounted () {
-    this.$router.push(this.menuArr[this.currentActive].link)
+  mounted() {
+    this.$router.push(this.menuArr[this.currentActive].link);
   },
   methods: {
-    directTo (index) {
-      this.$router.push(this.menuArr[index].link)
-      this.menuArr[this.currentActive].isActive = false
-      this.menuArr[index].isActive = true
-      this.currentActive = index
+    directTo(index) {
+      this.$router.push(this.menuArr[index].link);
+      this.menuArr[this.currentActive].isActive = false;
+      this.menuArr[index].isActive = true;
+      this.currentActive = index;
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -133,16 +133,20 @@ export default {
         height: 60px;
         line-height: 60px;
         font-size: 16px;
-        .nav-icon{
+        .nav-icon {
           vertical-align: middle;
-          width:18px;
+          width: 18px;
           height: 23px;
         }
       }
-      .activeItem{
-        color:'#f2b535'
+      .activeItem {
+        color: "#f2b535";
       }
     }
+  }
+  footer {
+    background-color: #26282c;
+    padding: 30px 0;
   }
 }
 </style>
