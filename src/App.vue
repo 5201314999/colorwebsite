@@ -30,62 +30,62 @@
 
 <script>
 export default {
-  name: "app",
-  data() {
+  name: 'app',
+  data () {
     return {
       menuArr: [
         {
-          title: "首页",
-          link: "home",
+          title: '首页',
+          link: 'home',
           isActive: false
         },
         {
-          title: "博客",
-          link: "bog",
+          title: '博客',
+          link: 'bog',
           isActive: false
         },
         {
-          title: "Github",
-          link: "github",
+          title: 'Github',
+          link: 'github',
           isActive: false
         },
         {
-          icon: "../../src/images/home/hot.png",
-          title: "AC前端大会",
-          link: "github",
+          icon: '../../src/images/home/hot.png',
+          title: 'AC前端大会',
+          link: 'github',
           isActive: false
         },
         {
-          title: "SuperStar",
-          link: "github",
+          title: 'SuperStar',
+          link: 'github',
           isActive: false
         },
         {
-          title: "Web前端导航",
-          link: "github",
+          title: 'Web前端导航',
+          link: 'github',
           isActive: false
         },
         {
-          title: "关于",
-          link: "github",
+          title: '关于',
+          link: 'github',
           isActive: false
         }
       ],
       currentActive: 0
-    };
+    }
   },
-  mounted() {
-    this.$router.push(this.menuArr[this.currentActive].link);
+  mounted () {
+    this.$router.push(this.menuArr[this.currentActive].link)
   },
   methods: {
-    directTo(index) {
-      this.$router.push(this.menuArr[index].link);
-      this.menuArr[this.currentActive].isActive = false;
-      this.menuArr[index].isActive = true;
-      this.currentActive = index;
+    directTo (index) {
+      this.$router.push(this.menuArr[index].link)
+      this.menuArr[this.currentActive].isActive = false
+      this.menuArr[index].isActive = true
+      this.currentActive = index
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
