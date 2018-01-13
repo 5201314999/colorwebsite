@@ -76,6 +76,7 @@ export default {
   },
   mounted () {
     this.$router.push(this.menuArr[this.currentActive].link)
+    this.menuArr[this.currentActive].isActive = true
   },
   methods: {
     directTo (index) {
@@ -128,16 +129,21 @@ export default {
     ul {
       float: right;
       li {
+        box-sizing: border-box;
         display: inline-block;
         padding: 0 20px;
         height: 60px;
         line-height: 60px;
         font-size: 16px;
+        cursor: pointer;
         .nav-icon {
           vertical-align: middle;
           width: 18px;
           height: 23px;
         }
+      }
+      li:hover{
+        border-bottom:2px solid #f2b535;
       }
       .activeItem {
         color: "#f2b535";

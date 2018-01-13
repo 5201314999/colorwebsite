@@ -17,7 +17,7 @@ Description
     <section class="openSource">
       <h2 class="i-main-title">
         <p class="main-title">
-          <span class="nofocus">OpenSource/</span>
+          <span class="nofocus">OpenSource /</span>
           <span>开源项目</span>
         </p>
         <p class="sub-title">种类众多的开源项目，让你爱不释手</p>
@@ -60,11 +60,14 @@ Description
         </a>
         </Col>
       </Row>
+      <div class="sectoin-footer">
+        <Button class="more" type="primary">更多开源></Button>
+      </div>
     </section>
     <section class="product">
       <h2 class="i-main-title">
         <p class="main-title">
-          <span class="nofocus">Product/</span>
+          <span class="nofocus">Product /</span>
           <span>作品</span>
         </p>
         <p class="sub-title">新奇好玩的作品，让你欲罢不能</p>
@@ -73,7 +76,9 @@ Description
         <Col class="product-col" :xs="24" :sm="12" :md="6" :lg="6">
         <a href="#" title="全世界首个Javascript程序员的在线编程对战游戏">
           <article class="i-art-wrapper">
-            <img src="../../images/home/codetank-eeb277.jpg" alt="">
+            <div>
+              <img src="../../images/home/codetank-eeb277.jpg" alt="">
+            </div>
             <p class="i-desc">CodeTank</p>
             <p class="i-desc">全世界首个Javascript程序员的在线编程对战游戏</p>
           </article>
@@ -82,7 +87,9 @@ Description
         <Col class="product-col" :xs="24" :sm="12" :md="6" :lg="6">
         <a href="#" title="加入我们成为大牛！无边界技术组织">
           <article class="i-art-wrapper">
-            <img src="../../images/home/alloyphoto-cd4563.jpg" alt="">
+            <div>
+              <img src="../../images/home/alloyphoto-cd4563.jpg" alt="">
+            </div>
             <p class="i-desc">AlloyPhoto</p>
             <p class="i-desc">专业在线图像处理App</p>
           </article>
@@ -91,7 +98,9 @@ Description
         <Col class="product-col" :xs="24" :sm="12" :md="6" :lg="6">
         <a href="#" title="HTML5骨骼动画引擎">
           <article class="i-art-wrapper">
-            <img src="../../images/home/alloystick-d2c55e.jpg" alt="">
+            <div>
+              <img src="../../images/home/alloystick-d2c55e.jpg" alt="">
+            </div>
             <p class="i-desc">AlloyStick</p>
             <p class="i-desc">HTML5骨骼动画引擎</p>
           </article>
@@ -100,17 +109,109 @@ Description
         <Col class="product-col" :xs="24" :sm="12" :md="6" :lg="6">
         <a href="#" title="新概念web开发工具">
           <article class="i-art-wrapper">
-            <img src="../../images/home/alloydesigner-8020c7.png" alt="">
+            <div>
+              <img src="../../images/home/alloydesigner-8020c7.png" alt="">
+            </div>
             <p class="i-desc">AlloyDesigner</p>
             <p class="i-desc">新概念web开发工具</p>
           </article>
         </a>
         </Col>
-
       </Row>
+      <div class="sectoin-footer">
+        <Button class="more" type="primary">更多作品></Button>
+      </div>
     </section>
     <section class="blog">
+      <h2 class="i-main-title">
+        <p class="main-title">
+          <span class="nofocus">Blog /</span>
+          <span>博客</span>
+        </p>
+        <p class="sub-title">最新技术发展,业界前沿博客</p>
+      </h2>
+      <Row>
+        <Col class="newest-blog" :xs="24" :sm="24" :md="12" :lg="12">
+        <div class="container">
+          <div class="header clearfix">
+            <span class="text">最新博客</span>
+            <span class="icon-wrapper" title="更多">
+              <Icon type="ios-more"></Icon>
+            </span>
+          </div>
+          <ul>
+            <li>
+              <a href="">
+                <span class="i-title">gif的故事：解剖表情动图的构成</span>
+                <span class="i-autor">jiongrong</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                 <span class="i-title">现代化富文本编辑器Quill Editor</span>
+                <span class="i-autor">jiongrong</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                 <span class="i-title">用threejs制作一款简单的赛车游戏</span>
+                <span class="i-autor">jiongrong</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                 <span class="i-title">使用 gka 加速 createjs 动画开发及图片优化</span>
+                <span class="i-autor">jiongrong</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                 <span class="i-title">AlloyTeam Conf 2017 前端技术大会震撼登陆，明星团队讲师倾城而出！</span>
+                <span class="i-autor">jiongrong</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        </Col>
+        <Col class="blog-category" :xs="24" :sm="24" :md="12" :lg="12">
+        <div class="container">
+          <div class="header clearfix">
+            <span class="text">博客分类</span>
+            <span class="icon-wrapper" title="更多">
+              <Icon type="ios-more"></Icon>
+            </span>
+          </div>
+          <Row>
+            <Col :xs="24" :sm="24" :md="12" :lg="12">
+              <div class="blog-category-icon">
+                <img src="" />>
+              </div>
+              <div class="name">
+                <p class="title">Javascript</p>
+                <p class="i-remark">没看过这些，怎么敢说懂js</p>
+              </div>
+            </Col>
+            <Col :xs="24" :sm="24" :md="12" :lg="12">
+            </Col>
+          </Row>
+           <Row>
+            <Col :xs="24" :sm="24" :md="12" :lg="12">
+            </Col>
+            <Col :xs="24" :sm="24" :md="12" :lg="12">
+            </Col>
+          </Row>
+           <Row>
+            <Col :xs="24" :sm="24" :md="12" :lg="12">
+            </Col>
+            <Col :xs="24" :sm="24" :md="12" :lg="12">
+            </Col>
+          </Row>
+            
+        </div>
+        </Col>
+      </Row>
 
+      <div></div>
     </section>
 
   </div>
@@ -118,36 +219,43 @@ Description
 
 <script>
 export default {
-  name: 'home',
-  data () {
+  name: "home",
+  data() {
     return {
       selectedValue: 0,
       speed: 10000,
       carouselList: [
         {
-          icon: 'first banner-div',
-          text: ''
+          icon: "first banner-div",
+          text: ""
         },
         {
-          icon: 'second',
-          text: 'Alloy前端周刊'
+          icon: "second",
+          text: "Alloy前端周刊"
         },
         {
-          icon: 'thirth',
-          text: '腾讯AlloyTeam招聘Web+工程师'
+          icon: "thirth",
+          text: "腾讯AlloyTeam招聘Web+工程师"
         },
         {
-          icon: 'firth',
-          text: '开放现代的web组件化框架'
+          icon: "firth",
+          text: "开放现代的web组件化框架"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
+.clearfix:after {
+  content: "";
+  height: 0;
+  clear: both;
+  display: block;
+}
 .home {
+  color: #000;
   .carousel {
     width: 100%;
     .item-carousel {
@@ -172,7 +280,7 @@ export default {
     }
   }
   section {
-    margin: auto 50px;
+    margin: 50px 47px;
   }
   .openSource {
     .openSource-col {
@@ -240,9 +348,12 @@ export default {
         box-sizing: border-box;
         // height: 180px;
         margin: 20px 10px;
-        border-radius: 4px;
-        img {
-          width: 100%;
+        border-radius: 5px;
+        div {
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
         }
         p.i-desc {
           text-align: left;
@@ -250,11 +361,65 @@ export default {
           color: #000;
         }
       }
+      .i-art-wrapper:hover {
+        border: 1px solid #e9e9e9;
+        img {
+          transform: scale(1.2);
+        }
+      }
     }
   }
   .i-art-wrapper:hover {
-    -webkit-transform: translateY(-6px);
+    -webkit-transition: -webkit-transform 0.5s;
+    transform: translateY(-6px);
     box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.5);
+  }
+  .section-footer {
+    text-align: center;
+  }
+  .blog {
+    .newest-blog .container,
+    .blog-category .container{
+      border-radius: 5px;
+      border: 1px solid #e9e9e9;
+      color: #616161;
+      font-size: 16px;
+      margin-left: 10px;
+      margin-right: 10px;
+      .header {
+        border-bottom: 1px solid #e4ecf3;
+        margin: 0 10px;
+        padding: 15px;
+        span.text {
+          float: left;
+        }
+        span.icon-wrapper {
+          float: right;
+          cursor: pointer;
+        }
+      }
+    }
+    .newest-blog {
+      ul li {
+        text-align: left;
+        position: relative;
+        padding: 15px;
+        a {
+          color: #616161;
+          .i-title:hover{
+            color: #f2b535;
+          }
+          .i-autor{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+          }
+        }
+      }
+    }
+    .blog-category{
+
+    }
   }
 }
 </style>
