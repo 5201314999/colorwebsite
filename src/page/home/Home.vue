@@ -184,7 +184,7 @@ Description
           <Row>
             <Col :xs="24" :sm="24" :md="12" :lg="12">
               <div class="blog-category-icon">
-                <img src="" />>
+                <img src="" />
               </div>
               <div class="name">
                 <p class="title">Javascript</p>
@@ -219,32 +219,32 @@ Description
 
 <script>
 export default {
-  name: "home",
-  data() {
+  name: 'home',
+  data () {
     return {
       selectedValue: 0,
       speed: 10000,
       carouselList: [
         {
-          icon: "first banner-div",
-          text: ""
+          icon: 'first banner-div',
+          text: ''
         },
         {
-          icon: "second",
-          text: "Alloy前端周刊"
+          icon: 'second',
+          text: 'Alloy前端周刊'
         },
         {
-          icon: "thirth",
-          text: "腾讯AlloyTeam招聘Web+工程师"
+          icon: 'thirth',
+          text: '腾讯AlloyTeam招聘Web+工程师'
         },
         {
-          icon: "firth",
-          text: "开放现代的web组件化框架"
+          icon: 'firth',
+          text: '开放现代的web组件化框架'
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
