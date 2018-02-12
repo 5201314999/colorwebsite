@@ -243,6 +243,35 @@ export default {
         }
       ]
     }
+  },
+  created () {
+       // promise 实现ajax 请求操作。
+    const getJSON = function (url) {
+      let promise = new Promise((resolve, reject) => {
+        let handler = function () {
+          if (this.readyState !== 4) {
+            return
+          }
+          if (this.status === 200) {
+            resolve(this.response)
+          } else {
+            reject(new Error(this.statusText))
+          }
+        }
+        var client = new XMLHttpRequest()
+        client.open('GET', url)
+        client.onreadystatechange = handler
+        client.responseType = 'json'
+        client.setRequestHeader('Accept', 'application/json')
+        client.send()
+      })
+      return promise
+    }
+    getJSON('http://127.0.0.1:8080/#/src/images/post.js').then((data) => {
+      console.log(data)
+    }, (data) => {
+      console.log(data)
+    })
   }
 }
 </script>
