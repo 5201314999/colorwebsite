@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import {$http, subscribeAlarm} from '../../services/getData'
 export default {
   name: 'app',
   data () {
@@ -85,18 +84,7 @@ export default {
       this.menuArr[this.currentActive].isActive = false
       this.menuArr[index].isActive = true
       this.currentActive = index
-    },
-    subscribeAlarm (param) {
-      $http(subscribeAlarm(param), res => {
-        this.$Message.success(res.data.msg)
-      }, err => {
-        this.$Message.error('订阅布控告警执行出错')
-      })
     }
-  },
-  beforeDestroyed () {
-    // 取消订阅布控告警
-    this.subscribeAlarm(0)
   }
 }
 </script>
